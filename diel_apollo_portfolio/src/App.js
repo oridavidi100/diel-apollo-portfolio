@@ -1,16 +1,11 @@
 import './style/App.css';
-// import './style/styles.css';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 
 function App() {
+  console.log(process.env.PUBLIC_URL);
   return (
     <div className="App">
       <Router basename={process.env.PUBLIC_URL}>
